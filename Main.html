@@ -1,0 +1,83 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script src=" http://code.jquery.com/jquery-1.11.3.min.js">></script>
+</head>
+<body>
+
+<div class="container">
+	<h1 >
+	ISS:International Space Station
+	</h1>
+	<hr ></hr>
+</div>
+
+<div class="container">
+<div class="row">
+	<div class="list-group col-md-2">
+	  <a id="boton1"  class="list-group-item">What is?</a>
+	  <a id="boton2"  class="list-group-item">Program</a>
+	  <a id="boton3"  class="list-group-item">Assembly</a>
+	</div>
+	<div class="col-md-9">
+				<div><img id="mainimg" class="crop-img img-rounded">
+						<img id="img2" class="crop-img img-rounded">
+						<img id="img3" class="crop-img img-rounded">
+						<img id="img4" class="crop-img img-rounded"></div>
+				<div  id="mainViewer" >
+				<h2 id="subtitle"></h2>
+				</div>
+				<div class="well" id="mainViewer" >
+				
+				<p id="p1" class="text-justify"></p>
+				
+				</div>
+			</div>
+</div>
+
+</div>
+</body>
+<script type="text/javascript">
+
+    $(".list-group-item").click(function() {
+    $(".list-group-item").removeClass("active");
+    $(this).addClass("active");
+     	var id = $(this).attr("id");
+     	var num = parseInt(id.slice(-1));
+    	switch (num){
+    		case 1:
+    		document.getElementById('subtitle').innerHTML = 'What is the ISS?';
+    		document.getElementById('p1').innerHTML = '      The ISS is a space station, or a habitable artificial satellite, in low Earth orbit. Its first component launched into orbit in 1998, and the ISS is now the largest artificial body in orbit and can often be seen with the naked eye from Earth. The ISS consists of pressurised modules, external trusses, solar arrays, and other components. ISS components have been launched by Russian Proton and Soyuz rockets as well as American Space Shuttles.  The ISS maintains an orbit with an altitude of between 330 and 435 km (205 and 270 mi) by means of reboost manoeuvres using the engines of the Zvezda module or visiting spacecraft. It completes 15.54 orbits per day.';
+    		$("#mainimg").attr('src',"Capture2.jpg") 
+        	$("#img2").attr('src',"")
+        	$("#img3").attr('src',"")
+        	$("#img4").attr('src',"")	
+        	break;
+    		case 2:
+        		$("#mainimg").attr('src',"Capture3.jpg") 
+        		$("#img2").attr('src',"img1.jpg")
+        		$("#img3").attr('src',"Capture4.jpg")
+        		$("#img4").attr('src',"Capture5.jpg")
+        		document.getElementById('subtitle').innerHTML = 'ISS Program';
+        		document.getElementById('p1').innerHTML = "     The International Space Station program is tied together by a complex set of legal, political and financial agreements between the fifteen nations involved in the project, governing ownership of the various components, rights to crewing and utilization, and responsibilities for crew rotation and station resupply. These agreements tie together the five space agencies and their respective International Space Station Programs and govern how they interact with each other on a daily basis to maintain station operations, from traffic control of spacecraft to and from the station, to utilization of space and crew time. In spring 2010, the International Space Station Program Managers from each of the five partner agencies were presented with Aviation Week's Laureate Award in the Space category,[1] and NASA's International Space Station Program was awarded the 2009 Collier Trophy.";
+        	break;
+        	case 3:
+       		$("#mainimg").attr('src',"Construct.jpg") 
+        	$("#img2").attr('src',"Construct2.jpg")
+        	$("#img3").attr('src',"")
+        	$("#img4").attr('src',"")
+        	document.getElementById('subtitle').innerHTML = 'Construction of the ISS';
+        	document.getElementById('p1').innerHTML = "     The process of assembling the International Space Station (ISS) has been under way since the 1990s. Zarya, the first ISS module, was launched by a Proton rocket on 20 November 1998. The STS-88 shuttle mission followed two weeks after Zarya was launched, bringing Unity, the first of three node modules, and connecting it to Zarya. This bare 2-module core of the ISS remained unmanned for the next one and a half years, until in July 2000 the Russian module Zvezda was added, allowing a minimum crew of two astronauts or cosmonauts to be on the ISS permanently. The ISS has a planned pressurized volume of approximately 1,000 cubic meters, a mass of approximately 400,000 kilograms, approximately 100 kilowatts of power output, a truss 108.4 meters long, modules 74 meters long, and a crew of six. Building the complete station will require more than 40 assembly flights. As of March 2011, 26 Space Shuttle flights have docked with ISS to add elements, and 9 other Shuttle flights have flown logistics-servicing missions to ISS without adding major external elements. These 35 Shuttle missions include 9 SpaceHab and 10 MPLM logistics-servicing missions in various combinations. The last two planned Shuttle flights are due to add one of the two final elements of ISS, followed by one last Proton launch with the planned delivery of the ERA. Other assembly flights have consisted of modules lifted by the Russian Proton rocket or in the case of Pirs and Poisk by a Soyuz-U rocket";
+        	break;
+    	}
+
+    });
+    $("#boton1").click();
+    
+    
+
+
+
+</script>
+</html>
